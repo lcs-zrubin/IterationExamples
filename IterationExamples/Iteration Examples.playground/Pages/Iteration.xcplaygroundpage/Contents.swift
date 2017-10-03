@@ -10,13 +10,15 @@ let canvas = Canvas(width: 360, height: 100)
 
 canvas.drawShapesWithBorders = false
 
-for i in stride(from: 0, through: 360, by: 1) {
+for i in stride(from: 0, through: 360, by: 60) {
+    for x in stride(from: 0, through: 100, by: 20) {
     
     //Changes the colour
-    canvas.fillColor = Color(hue: i, saturation: 100, brightness: 100, alpha: 100)
+    canvas.fillColor = Color(hue: i, saturation: x, brightness: 100, alpha: 100)
     
     //Drawing the Rectangles
-    canvas.drawRectangle(bottomLeftX: i, bottomLeftY: 0, width: 1, height: canvas.height)
+    canvas.drawRectangle(bottomLeftX: i, bottomLeftY: x, width: 60, height: 20)
+    }
 }
 
 /*:
