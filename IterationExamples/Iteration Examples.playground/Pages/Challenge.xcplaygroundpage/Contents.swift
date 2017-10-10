@@ -17,10 +17,9 @@ let canvas = Canvas(width: 300, height: 300)
 // Below this line, try combining a loop and four statements that draw lines to generate the goal
 
 canvas.translate(byX: 150, byY: 150)
-for i in stride(from: 0, through: 360, by: 30) {
-    canvas.rotate(by: 15)
-    canvas.lineColor = Color(hue: i, saturation: 50, brightness: 75, alpha: 100)
-    canvas.drawLine(fromX: -150, fromY: 0, toX: 150, toY: 0)
+for _ in stride(from: 45, through: 360, by: 45) {
+    canvas.rotate(by: 45)
+    canvas.drawLine(fromX: 100, fromY: 42, toX: 100, toY: -42)
 }
 /*:
  ## Template code
