@@ -19,6 +19,14 @@ let canvas = Canvas(width: 300, height: 300)
 for x in stride(from: 25, through: 275, by: 50) {
     for y in stride(from: 275, through: 25, by: -50) {
     canvas.drawEllipse(centreX: x, centreY: y, width: 3, height: 3)
+        
+        var randumb = random(from: 1, toButNotIncluding: 3)
+        if randumb == 1 {
+            canvas.drawLine(fromX: x-25, fromY: y-25, toX: x+25, toY: y+25)
+        } else {
+            canvas.drawLine(fromX: x-25, fromY: y+25, toX: x+25, toY: y-25)
+        }
+        
 }
 }
 /*:
