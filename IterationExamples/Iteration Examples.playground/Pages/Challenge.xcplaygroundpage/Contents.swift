@@ -16,10 +16,10 @@ let canvas = Canvas(width: 300, height: 300)
 
 // Below this line, try combining a loop and four statements that draw lines to generate the goal
 
-canvas.translate(byX: 150, byY: 150)
-for _ in stride(from: 40, through: 360, by: 40) {
-    canvas.rotate(by: 40)
-    canvas.drawLine(fromX: 100, fromY: 37, toX: 100, toY: -37)
+for x in stride(from: 25, through: 275, by: 50) {
+    for y in stride(from: 275, through: 25, by: -50) {
+    canvas.drawEllipse(centreX: x, centreY: y, width: 3, height: 3)
+}
 }
 /*:
  ## Template code
