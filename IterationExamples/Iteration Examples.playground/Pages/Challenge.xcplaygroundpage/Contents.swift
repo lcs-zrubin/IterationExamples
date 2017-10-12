@@ -21,6 +21,8 @@ for x in stride(from: 25, through: 275, by: 50) {
     canvas.drawEllipse(centreX: x, centreY: y, width: 3, height: 3)
         
         var randumb = random(from: 1, toButNotIncluding: 3)
+        var randcolor = random(from: 1, toButNotIncluding: 361)
+        canvas.lineColor = Color(hue: randcolor, saturation: 100, brightness: 100, alpha: 100)
         if randumb == 1 {
             canvas.drawLine(fromX: x-25, fromY: y-25, toX: x+25, toY: y+25)
         } else {
