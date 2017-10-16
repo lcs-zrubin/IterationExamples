@@ -16,10 +16,15 @@ let canvas = Canvas(width: 600, height: 600)
 
 // Below this line, try combining a loop and four statements that draw lines to generate the goal
 
+//Horizonal Position
 for x in stride(from: 50, through: 550, by: 100) {
+    //Veritcal Position
     for y in stride(from: 50, through: 550, by: 100) {
+        
+        let a = random(from: 1, toButNotIncluding: 361)
+        
         for z in stride(from: 100, through: 20, by: -20) {
-            let a = random(from: 1, toButNotIncluding: 361)
+
             let b = random(from: 50, toButNotIncluding: 101)
             let c = random(from: 75, toButNotIncluding: 101)
             canvas.drawShapesWithBorders = false
