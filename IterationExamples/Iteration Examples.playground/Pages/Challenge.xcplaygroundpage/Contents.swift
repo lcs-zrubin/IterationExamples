@@ -12,23 +12,18 @@ import PlaygroundSupport
 //: ## Add your code below
 
 // Create canvas
-let canvas = Canvas(width: 300, height: 300)
+let canvas = Canvas(width: 600, height: 600)
 
 // Below this line, try combining a loop and four statements that draw lines to generate the goal
 
-for x in stride(from: 25, through: 275, by: 50) {
-    for y in stride(from: 275, through: 25, by: -50) {
+for x in stride(from: 50, through: 550, by: 100) {
+    for y in stride(from: 50, through: 550, by: 100) {
+        for z in stride(from: 100, through: 20, by: -20) {
+            canvas.drawShapesWithFill = false
     canvas.drawEllipse(centreX: x, centreY: y, width: 3, height: 3)
+        canvas.drawEllipse(centreX: x, centreY: y, width: z, height: z)
         
-        var randumb = random(from: 1, toButNotIncluding: 3)
-        var randcolor = random(from: 1, toButNotIncluding: 361)
-        canvas.lineColor = Color(hue: randcolor, saturation: 100, brightness: 100, alpha: 100)
-        if randumb == 1 {
-            canvas.drawLine(fromX: x-25, fromY: y-25, toX: x+25, toY: y+25)
-        } else {
-            canvas.drawLine(fromX: x-25, fromY: y+25, toX: x+25, toY: y-25)
-        }
-        
+}
 }
 }
 /*:
