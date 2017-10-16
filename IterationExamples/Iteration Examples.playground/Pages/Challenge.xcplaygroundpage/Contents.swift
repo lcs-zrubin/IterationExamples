@@ -17,6 +17,9 @@ let canvas = Canvas(width: 600, height: 600)
 // Below this line, try combining a loop and four statements that draw lines to generate the goal
 
 //Horizonal Position
+
+var rand = 0
+
 for x in stride(from: 50, through: 550, by: 100) {
     //Veritcal Position
     for y in stride(from: 50, through: 550, by: 100) {
@@ -27,10 +30,13 @@ for x in stride(from: 50, through: 550, by: 100) {
         //Size of circle and saturation
         for z in stride(from: 100, through: 20, by: -20) {
 
+            rand = rand + 1
+            
+            
             let c = random(from: 75, toButNotIncluding: 101)
             canvas.drawShapesWithBorders = false
             
-            canvas.fillColor = Color.init(hue: a, saturation: z-20, brightness: 90, alpha: 100)
+            canvas.fillColor = Color.init(hue: rand, saturation: z-20, brightness: 90, alpha: 100)
        
             //draw dots & grid
     canvas.drawEllipse(centreX: x, centreY: y, width: 3, height: 3)
