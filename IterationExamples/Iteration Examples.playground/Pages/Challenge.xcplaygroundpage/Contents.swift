@@ -21,15 +21,18 @@ for x in stride(from: 50, through: 550, by: 100) {
     //Veritcal Position
     for y in stride(from: 50, through: 550, by: 100) {
         
+        //Decide the hue
         let a = random(from: 1, toButNotIncluding: 361)
         
+        //Size of circle and saturation
         for z in stride(from: 100, through: 20, by: -20) {
 
-            let b = random(from: 50, toButNotIncluding: 101)
             let c = random(from: 75, toButNotIncluding: 101)
             canvas.drawShapesWithBorders = false
             
-            canvas.fillColor = Color.init(hue: a, saturation: b, brightness: c, alpha: 100)
+            canvas.fillColor = Color.init(hue: a, saturation: z-20, brightness: 90, alpha: 100)
+       
+            //draw dots & grid
     canvas.drawEllipse(centreX: x, centreY: y, width: 3, height: 3)
         canvas.drawEllipse(centreX: x, centreY: y, width: z, height: z)
         
